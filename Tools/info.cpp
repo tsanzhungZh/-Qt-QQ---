@@ -2,13 +2,13 @@
 #include "info.h"
 #include "debug.h"
 #include "qdebug.h"
+Info info;
+
 QList<QString> login_mode_db_tablename_arry = {
     "owner_login",
     "worker_login",
     "manager_login"
 };
-
-
 Info::Info()
 {
 

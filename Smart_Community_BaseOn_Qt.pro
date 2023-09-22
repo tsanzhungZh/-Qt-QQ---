@@ -11,6 +11,8 @@ CONFIG += c++17
 SOURCES += \
     Interface/databaseaction.cpp \
     Interface/databaseoperator.cpp \
+    Module/basemodule.cpp \
+    Module/managermodule.cpp \
     Module/systemwindowview.cpp \
     Tools/globalkeeper.cpp \
     Tools/info.cpp \
@@ -21,6 +23,8 @@ SOURCES += \
 HEADERS += \
     Interface/databaseaction.h \
     Interface/databaseoperator.h \
+    Module/basemodule.h \
+    Module/managermodule.h \
     Module/systemwindowview.h \
     Tools/all_include.h \
     Tools/globalkeeper.h \
@@ -39,4 +43,34 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     README \
-    Tools/README
+    Tools/README \
+    image/add.png \
+    image/addcarstation.png \
+    image/addhouse.png \
+    image/attend.jpg \
+    image/attend.png \
+    image/attend1.png \
+    image/carstation.htm \
+    image/carstation.png \
+    image/carstation1.png \
+    image/confirm.jpg \
+    image/confirm1.jpg \
+    image/confirm1.png \
+    image/confirm2.png \
+    image/del.png \
+    image/deladdcarstation.png \
+    image/free.jpg \
+    image/free.png \
+    image/free1.png \
+    image/houses.png \
+    image/issuerepair.png \
+    image/issueshow.png \
+    image/pay.png \
+    image/paymanage.png \
+    image/price.png \
+    image/rentcarstation.png \
+    image/show.png \
+    image/windows.jpg
+
+RESOURCES += \
+    resouce.qrc

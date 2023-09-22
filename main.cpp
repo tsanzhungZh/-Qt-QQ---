@@ -4,6 +4,7 @@
 
 #include "Tools/all_include.h"
 
+#include "Module/systemwindowview.h"
 QString database_path = "C:/Users/ztc/Smart_Community.db";
 
 static void load_globalkeeper(void);
@@ -18,10 +19,21 @@ int main(int argc, char *argv[])
     load_globalkeeper();
     gk_init_database_action();
 
-    Widget w;
-    w.show();
+    //Widget w;
+    //w.show();
 
-    qDebug()<<global_keeper->database_action->select_usr_password(1,1379206136);
+#ifdef DEBUG_GLOBALKEEPER
+    //qDebug()<<global_keeper->database_action->select_usr_password(1,1379206136);
+#endif
+#ifdef DEBUG_SYS_VIEW
+    SystemWindowView abc(2);
+    abc.show();
+#endif
+
+
+
+
+
 
 
     return a.exec();

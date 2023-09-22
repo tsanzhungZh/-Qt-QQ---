@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/add.png</file>
+        <file>image/addcarstation.png</file>
+        <file>image/addhouse.png</file>
+        <file>image/attend.jpg</file>
+        <file>image/attend.png</file>
+        <file>image/attend1.png</file>
+        <file>image/carstation.htm</file>
+        <file>image/carstation.png</file>
+        <file>image/carstation1.png</file>
+        <file>image/confirm.jpg</file>
+        <file>image/confirm1.jpg</file>
+        <file>image/confirm1.png</file>
+        <file>image/confirm2.png</file>
+        <file>image/del.png</file>
+        <file>image/deladdcarstation.png</file>
+        <file>image/free.jpg</file>
+        <file>image/free.png</file>
+        <file>image/free1.png</file>
+        <file>image/houses.png</file>
+        <file>image/issuerepair.png</file>
+        <file>image/issueshow.png</file>
+        <file>image/pay.png</file>
+        <file>image/paymanage.png</file>
+        <file>image/price.png</file>
+        <file>image/rentcarstation.png</file>
+        <file>image/show.png</file>
+        <file>image/windows.jpg</file>
+    </qresource>
+</RCC>

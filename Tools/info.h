@@ -11,6 +11,10 @@ enum login_mode_enum{
     e_manager,
     e_error_mode ,
 };
+
+
+
+
 #if 0
 typedef struct login_mode_db_tablename_st{
 
@@ -20,6 +24,8 @@ typedef struct login_mode_db_tablename_st{
 
 }login_mode_db_tablename_t;
 #endif
+
+
 
 
 /* @funcname: get_xmode_login_db_tablename
@@ -33,6 +39,7 @@ class Info
 {
 public:
     Info();
+    QString picture_path = ":/image/";
 };
 
 #endif // INFO_H

@@ -11,9 +11,7 @@
 #include "debug.h"
 
 #include "Tools/globalkeeper.h"
-
-#include "Module/systemwindowview.h"
-
+#include "Module/managermodule.h"
 
 
 

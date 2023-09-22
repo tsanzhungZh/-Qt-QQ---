@@ -14,6 +14,7 @@
 static void gk_init_systemwindowview(int mode);
 extern GlobalKeeper* global_keeper;
 
+//@since 1.0
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)
