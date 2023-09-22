@@ -1,0 +1,4 @@
+This directory is tools for project, the "globalkeeper.h" header file provide gloabal variable
+such as database_action and systemwindowview.
+systemwindowview is the main window in this project.
+database_action provide a lot of interfaces for you to r/w database.

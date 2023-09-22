@@ -2,8 +2,18 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include "Tools/all_include.h"
+/*
+ * @version 1.0
+ * @author ztc
+ * @date 2023/9/22
+ * @description The login interface and login UI display and related business logic
+ */
+
+
+
 static void gk_init_systemwindowview(int mode);
 extern GlobalKeeper* global_keeper;
+
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::Widget)

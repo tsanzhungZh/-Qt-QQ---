@@ -1,0 +1,7 @@
+The smart community based on Qt contains various functions for owners, administrators,
+and staff to handle related business. The SQLITE database is used, and the
+remote database can be upgraded later
+
+version          author         date            description
+1.0              ZTC            2023/9/22       Initial version, initialization commit, login included
+                                                State machines, database encapsulation interfaces, global maintainers

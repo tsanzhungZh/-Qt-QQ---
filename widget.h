@@ -9,14 +9,21 @@
 #include "Tools/info.h"
 #include <QMessageBox>
 #define LOGIN_MODE_NUM 3
-
-
-
+/*
+ * @version 1.0
+ * @author ztc
+ * @date 2023/9/22
+ * @description The login interface and login UI display and related business logic
+ */
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
 
+
+/* @description the login class
+ * @since 1.0
+ */
 class Widget : public QWidget
 
 {
