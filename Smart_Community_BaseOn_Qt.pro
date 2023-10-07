@@ -11,9 +11,13 @@ CONFIG += c++17
 SOURCES += \
     Interface/databaseaction.cpp \
     Interface/databaseoperator.cpp \
+    Interface/tablemodelaction.cpp \
     Module/basemodule.cpp \
+    Module/managerUI/managermodui_add.cpp \
+    Module/managerUI/managermodui_alter.cpp \
     Module/managermodule.cpp \
     Module/systemwindowview.cpp \
+    Module/workermodule.cpp \
     Tools/globalkeeper.cpp \
     Tools/info.cpp \
     debug.cpp \
@@ -23,9 +27,13 @@ SOURCES += \
 HEADERS += \
     Interface/databaseaction.h \
     Interface/databaseoperator.h \
+    Interface/tablemodelaction.h \
     Module/basemodule.h \
+    Module/managerUI/managermodui_add.h \
+    Module/managerUI/managermodui_alter.h \
     Module/managermodule.h \
     Module/systemwindowview.h \
+    Module/workermodule.h \
     Tools/all_include.h \
     Tools/globalkeeper.h \
     Tools/info.h \
@@ -33,6 +41,8 @@ HEADERS += \
     widget.h
 
 FORMS += \
+    Module/managerUI/managermodui_add.ui \
+    Module/managerUI/managermodui_alter.ui \
     Module/systemwindowview.ui \
     widget.ui
 

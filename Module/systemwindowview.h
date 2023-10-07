@@ -5,7 +5,7 @@
 #include "Module/managermodule.h"
 #include "QToolBar"
 #include "QMenuBar"
-
+#include "Tools/info.h"
 namespace Ui {
 class SystemWindowView;
 }
@@ -20,6 +20,7 @@ public:
 
     ManagerModule *manager_mod;
 
+    int cur_mode_id;
 
     QMenuBar *menubar;
     QToolBar *toolbar;

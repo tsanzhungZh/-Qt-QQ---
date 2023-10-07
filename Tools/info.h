@@ -11,7 +11,11 @@ enum login_mode_enum{
     e_manager,
     e_error_mode ,
 };
+enum total_user_ismanager_enum{
 
+    e_No = 0x0,
+    e_Yes,
+};
 
 
 

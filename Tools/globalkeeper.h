@@ -20,9 +20,21 @@ class GlobalKeeper : public QObject
 public:
     explicit GlobalKeeper(QObject *parent = nullptr);
     DataBaseAction* database_action;
-    SystemWindowView* sys_win_view;
-signals:
 
+    SystemWindowView* sys_win_view;
+
+    QSqlDatabase* get_database(void);
+    QSqlTableModel* get_model(void);
+    QTableView* get_tableview(void);
+
+    void regist_model(QSqlTableModel* model);
+    void regist_tableview(QTableView* tableview);
+
+signals:
+private:
+    QSqlDatabase* database;
+    QTableView* current_tableview;
+    QSqlTableModel* current_model;
 };
 
 #endif // GLOBALKEEPER_H

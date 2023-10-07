@@ -6,7 +6,17 @@ SystemWindowView::SystemWindowView(int mode,QWidget *parent) :
     ui(new Ui::SystemWindowView)
 {
     ui->setupUi(this);
+    this->cur_mode_id = mode;
+    if(this->cur_mode_id > e_manager || this->cur_mode_id < e_owner){
+        QMessageBox::question(this,
+                              tr("error"),
+                              tr("load error! enter mode is out of range(0~2)").arg(mode),
+                              QMessageBox::Ok | QMessageBox::Cancel,
+                              QMessageBox::Ok);
+        delete this;
+        return;
 
+    }
     this->load_window_bar();
     this->load_xmode_part(mode);
 
@@ -54,10 +64,12 @@ void SystemWindowView::mode_worker_init(){
 
 }
 void SystemWindowView::mode_manager_init(){
-    this->manager_mod = new ManagerModule;
+    this->manager_mod = new ManagerModule(this);
     this->ui->menubar->addMenu(this->manager_mod->menu_manager);
-    this->ui->toolBar->addAction(this->manager_mod->act_add_worker);
-    this->ui->toolBar->addAction(this->manager_mod->act_show_worker);
-    this->ui->toolBar->addAction(this->manager_mod->act_alter_worker);
-    this->ui->toolBar->addAction(this->manager_mod->act_del_worker);
+    this->ui->toolBar->addAction(this->manager_mod->act_add_user);
+    this->ui->toolBar->addAction(this->manager_mod->act_show_user);
+    this->ui->toolBar->addAction(this->manager_mod->act_alter_user);
+    this->ui->toolBar->addAction(this->manager_mod->act_del_user);
+
+
 }

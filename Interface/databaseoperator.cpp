@@ -125,4 +125,8 @@ void DataBaseOperator::DELETE(QString table,QString filter)
 
 
 }
+QSqlDatabase* DataBaseOperator::get_database(){
 
+    return &this->DataBase;
+
+}

@@ -28,6 +28,8 @@ int main(int argc, char *argv[])
 #ifdef DEBUG_SYS_VIEW
     SystemWindowView abc(2);
     abc.show();
+
+    global_keeper->sys_win_view = &abc;
 #endif
 
 
@@ -49,5 +51,6 @@ static void load_globalkeeper(void){
 static void gk_init_database_action(void){
 
     global_keeper->database_action = new DataBaseAction(database_path);
+
     return;
 }

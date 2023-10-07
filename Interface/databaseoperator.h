@@ -40,10 +40,13 @@ public:
     void INSERT(QString table,QString values,QString column = "");//不指定字段时注意插入的值顺序需要一致
     void UPDATE(QString table,QMap<QString,QVariant> map,QString filter);
     void DELETE(QString table,QString filter="");
-private:
-    QSqlDatabase DataBase;
-    QString DataBasePath;
 
+    QSqlDatabase* get_database();
+
+private:
+
+    QString DataBasePath;
+    QSqlDatabase DataBase;
     void init_Database();
 
 

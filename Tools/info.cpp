@@ -9,6 +9,12 @@ QList<QString> login_mode_db_tablename_arry = {
     "worker_login",
     "manager_login"
 };
+
+
+
+
+
+
 Info::Info()
 {
 
