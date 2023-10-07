@@ -19,7 +19,7 @@ void ManagerModule::module_init(){
 
 }
 void ManagerModule::menu_init(){
-    this->menu_manager = new QMenu("worker manage");
+    this->menu_manager = new QMenu("user manage");
 
     this->menu_manager->addAction(this->act_add_user);
     this->menu_manager->addAction(this->act_show_user);

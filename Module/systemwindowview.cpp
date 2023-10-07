@@ -61,11 +61,24 @@ void SystemWindowView::mode_owner_init(){
 
 }
 void SystemWindowView::mode_worker_init(){
+    this->worker_mod = new WorkerModule(this);
+
+    this->ui->menubar->addMenu(this->worker_mod->menu_owner_info);
+
+    this->ui->toolBar->addAction(this->worker_mod->act_owner_find);
+    this->ui->toolBar->addAction(this->worker_mod->act_owner_alter);
+    this->ui->toolBar->addAction(this->worker_mod->act_owner_registered);
+    this->ui->toolBar->addAction(this->worker_mod->act_owner_delete);
+
+
+
 
 }
 void SystemWindowView::mode_manager_init(){
     this->manager_mod = new ManagerModule(this);
+
     this->ui->menubar->addMenu(this->manager_mod->menu_manager);
+
     this->ui->toolBar->addAction(this->manager_mod->act_add_user);
     this->ui->toolBar->addAction(this->manager_mod->act_show_user);
     this->ui->toolBar->addAction(this->manager_mod->act_alter_user);

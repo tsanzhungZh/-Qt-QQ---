@@ -27,5 +27,7 @@
         <file>image/rentcarstation.png</file>
         <file>image/show.png</file>
         <file>image/windows.jpg</file>
+        <file>image/find.jpg</file>
+        <file>image/modify.jpg</file>
     </qresource>
 </RCC>
