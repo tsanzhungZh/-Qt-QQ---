@@ -29,6 +29,12 @@ public:
     QAction *act_del_parking_info;
     QAction *act_parking_rent;
 
+    //缴费管理
+    QMenu *menu_payment_manage;
+    QAction *act_price_manage;
+    QAction *act_payment_select;
+    QAction *act_get_payment;
+
 
 private:
 
@@ -52,7 +58,10 @@ public slots:
     void slot_del_parking_info();
     void slot_parking_rent();
 
-
+    //缴费管理
+    void slot_price_manage();
+    void slot_payment_select();
+    void slot_get_payment();
 
 };
 

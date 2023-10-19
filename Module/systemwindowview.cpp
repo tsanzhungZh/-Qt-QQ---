@@ -89,8 +89,11 @@ void SystemWindowView::mode_worker_init(){
     this->ui->toolBar->addAction(this->worker_mod->act_del_parking_info);
     this->ui->toolBar->addAction(this->worker_mod->act_parking_rent);
 
-
-
+    //½É·Ñ¹ÜÀí
+    this->ui->menubar->addMenu(this->worker_mod->menu_payment_manage);
+    this->ui->toolBar->addAction(this->worker_mod->act_price_manage);
+    this->ui->toolBar->addAction(this->worker_mod->act_payment_select);
+    this->ui->toolBar->addAction(this->worker_mod->act_get_payment);
 
 }
 void SystemWindowView::mode_manager_init(){

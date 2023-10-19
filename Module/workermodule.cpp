@@ -35,8 +35,10 @@ void WorkerModule::menu_init(){
     this->menu_parking_manage->addAction(this->act_del_parking_info);
     this->menu_parking_manage->addAction(this->act_parking_rent);
 
-
-
+    this->menu_payment_manage = new QMenu("payment manage");
+    this->menu_payment_manage->addAction(this->act_price_manage);
+    this->menu_payment_manage->addAction(this->act_payment_select);
+    this->menu_payment_manage->addAction(this->act_get_payment);
 
 
 }
@@ -82,6 +84,22 @@ void WorkerModule::act_init(){
     connect(act_parking_rent,&QAction::triggered,this,&WorkerModule::slot_parking_rent);
 
 
+
+    //工作人员的缴费管理
+    this->act_price_manage = new QAction(QIcon(info.picture_path + "price.png"),"price manage");
+    this->act_price_manage->setStatusTip(tr("parking rent"));
+    connect(act_price_manage,&QAction::triggered,this,&WorkerModule::slot_parking_rent);
+
+    this->act_payment_select = new QAction(QIcon(info.picture_path + "pay.png"),"payment select");
+    this->act_payment_select->setStatusTip(tr("payment select"));
+    connect(act_payment_select,&QAction::triggered,this,&WorkerModule::slot_payment_select);
+
+    this->act_get_payment = new QAction(QIcon(info.picture_path + "paymanage.png"),"get payment");
+    this->act_get_payment->setStatusTip(tr("get payment"));
+    connect(act_get_payment,&QAction::triggered,this,&WorkerModule::slot_get_payment);
+
+
+
 }
 void WorkerModule::slot_owner_find(){
 
@@ -110,3 +128,15 @@ void WorkerModule::slot_del_parking_info(){
 void WorkerModule::slot_parking_rent(){
 
 }
+
+void WorkerModule::slot_price_manage(){
+
+}
+void WorkerModule::slot_payment_select(){
+
+}
+void WorkerModule::slot_get_payment(){
+
+}
+
+
