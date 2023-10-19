@@ -19,15 +19,25 @@ void ManagerModule::module_init(){
 
 }
 void ManagerModule::menu_init(){
+    //usermanage
     this->menu_manager = new QMenu("user manage");
 
     this->menu_manager->addAction(this->act_add_user);
     this->menu_manager->addAction(this->act_show_user);
     this->menu_manager->addAction(this->act_alter_user);
     this->menu_manager->addAction(this->act_del_user);
+
+
+    //attendance manage
+    this->menu_attendance = new QMenu("attendance manage");
+    this->menu_attendance->addAction(this->act_free_confirm);
+    this->menu_attendance->addAction(this->act_free_approve);
+    this->menu_attendance->addAction(this->act_find_attend);
+
+
 }
 void ManagerModule::act_init(){
-
+    //usermanage
     this->act_add_user = new QAction(QIcon(info.picture_path + "add.png"),"add user");
     this->act_add_user->setStatusTip(tr("add user"));
     connect(act_add_user,&QAction::triggered,this,&ManagerModule::slot_add_user);
@@ -43,6 +53,22 @@ void ManagerModule::act_init(){
     this->act_del_user = new QAction(QIcon(info.picture_path + "free.png"),"del user");
     this->act_del_user->setStatusTip(tr("del user"));
     connect(act_del_user,&QAction::triggered,this,&ManagerModule::slot_del_user);
+
+
+
+    //attendance manage
+    this->act_free_confirm = new QAction(QIcon(info.picture_path + "free.jpg"),"free confirm");
+    this->act_free_confirm->setStatusTip(tr("free confirm"));
+    connect(act_free_confirm,&QAction::triggered,this,&ManagerModule::slot_free_confirm);
+
+    this->act_free_approve = new QAction(QIcon(info.picture_path + "approve.jpg"),"free approve");
+    this->act_free_approve->setStatusTip(tr("free approve"));
+    connect(act_free_approve,&QAction::triggered,this,&ManagerModule::slot_free_approve);
+
+    this->act_find_attend = new QAction(QIcon(info.picture_path + "find.jpg"),"find attend");
+    this->act_find_attend->setStatusTip(tr("find attend"));
+    connect(act_find_attend,&QAction::triggered,this,&ManagerModule::slot_find_attend);
+
 
 
 }
@@ -101,9 +127,15 @@ void ManagerModule::slot_del_user(){
 
 }
 
+void ManagerModule::slot_free_confirm(){
 
+}
+void ManagerModule::slot_free_approve(){
 
+}
+void ManagerModule::slot_find_attend(){
 
+}
 
 
 

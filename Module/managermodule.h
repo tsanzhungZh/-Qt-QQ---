@@ -15,11 +15,18 @@ public:
     explicit ManagerModule(QObject *parent = nullptr);
 
     QMenu *menu_manager;
-
     QAction *act_show_user;
     QAction *act_add_user;
     QAction *act_alter_user;
     QAction *act_del_user;
+
+
+    QMenu *menu_attendance;
+    QAction *act_free_confirm;
+    QAction *act_free_approve;
+    QAction *act_find_attend;
+
+
 
     ManagerModUI_add* add_func;
     ManagerModUI_alter* alter_func;
@@ -34,10 +41,17 @@ private:
 
 
 public slots:
+
+
     void slot_add_user();
     void slot_show_user();
     void slot_alter_user();
     void slot_del_user();
+
+
+    void slot_free_confirm();
+    void slot_free_approve();
+    void slot_find_attend();
 
 };
 

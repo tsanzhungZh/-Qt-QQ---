@@ -78,11 +78,20 @@ void SystemWindowView::mode_manager_init(){
     this->manager_mod = new ManagerModule(this);
 
     this->ui->menubar->addMenu(this->manager_mod->menu_manager);
-
     this->ui->toolBar->addAction(this->manager_mod->act_add_user);
     this->ui->toolBar->addAction(this->manager_mod->act_show_user);
     this->ui->toolBar->addAction(this->manager_mod->act_alter_user);
     this->ui->toolBar->addAction(this->manager_mod->act_del_user);
+
+
+    this->ui->menubar->addMenu(this->manager_mod->menu_attendance);
+    this->ui->toolBar->addAction(this->manager_mod->act_free_confirm);
+    this->ui->toolBar->addAction(this->manager_mod->act_free_approve);
+    this->ui->toolBar->addAction(this->manager_mod->act_find_attend);
+
+
+
+
 
 
 }

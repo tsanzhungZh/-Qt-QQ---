@@ -25,6 +25,13 @@ void WorkerModule::menu_init(){
     this->menu_owner_info->addAction(this->act_owner_alter);
     this->menu_owner_info->addAction(this->act_owner_registered);
     this->menu_owner_info->addAction(this->act_owner_delete);
+
+
+
+
+
+
+
 }
 void WorkerModule::act_init(){
 
