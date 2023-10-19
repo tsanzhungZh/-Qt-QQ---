@@ -13,13 +13,15 @@ class OwnerModule : public BaseModule
 public:
     explicit OwnerModule(QObject *parent = nullptr);
 
-
+    //业主车位管理
     QMenu *menu_my_parking;
     QAction *act_parking_request;
     QAction *act_parking_show;
 
-
-
+    //业主缴费
+    QMenu *menu_payment_manage;
+    QAction *act_payment_select;
+    QAction *act_payment_self_service;
 
 private:
 
@@ -29,8 +31,10 @@ private:
 
 public slots:
     void slot_parking_request();
-
     void slot_parking_show();
+
+    void slot_payment_select();
+    void slot_payment_self_service();
 
 
 

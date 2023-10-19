@@ -26,6 +26,11 @@ void OwnerModule::menu_init(){
     this->menu_my_parking->addAction(this->act_parking_request);
     this->menu_my_parking->addAction(this->act_parking_show);
 
+    //业主缴费
+    this->menu_payment_manage = new QMenu("payment manage");
+    this->menu_payment_manage->addAction(this->act_payment_select);
+    this->menu_payment_manage->addAction(this->act_payment_self_service);
+
 
 
 }
@@ -42,6 +47,15 @@ void OwnerModule::act_init(){
     connect(act_parking_show,&QAction::triggered,this,&OwnerModule::slot_parking_show);
 
 
+    //业主缴费
+    this->act_payment_select = new QAction(QIcon(info.picture_path + "paymanage.png"),"payment select");
+    this->act_payment_select->setStatusTip(tr("payment select"));
+    connect(act_payment_select,&QAction::triggered,this,&OwnerModule::slot_payment_select);
+
+    this->act_payment_self_service = new QAction(QIcon(info.picture_path + "price.png"),"payment self service");
+    this->act_payment_self_service->setStatusTip(tr("payment self service"));
+    connect(act_payment_self_service,&QAction::triggered,this,&OwnerModule::slot_payment_self_service);
+
 }
 void OwnerModule::slot_parking_request(){
 
@@ -51,5 +65,14 @@ void OwnerModule::slot_parking_request(){
 void OwnerModule::slot_parking_show(){
 
 
+
+}
+
+
+void OwnerModule::slot_payment_select(){
+
+}
+
+void OwnerModule::slot_payment_self_service(){
 
 }

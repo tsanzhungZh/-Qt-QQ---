@@ -21,7 +21,6 @@ SystemWindowView::SystemWindowView(int mode,QWidget *parent) :
     this->load_xmode_part(mode);
 
 
-
 }
 
 SystemWindowView::~SystemWindowView()
@@ -65,7 +64,10 @@ void SystemWindowView::mode_owner_init(){
     this->ui->toolBar->addAction(this->owner_mod->act_parking_request);
     this->ui->toolBar->addAction(this->owner_mod->act_parking_show);
 
-
+    //ÒµÖ÷½É·Ñ
+    this->ui->menubar->addMenu(this->owner_mod->menu_payment_manage);
+    this->ui->toolBar->addAction(this->owner_mod->act_payment_select);
+    this->ui->toolBar->addAction(this->owner_mod->act_payment_self_service);
 
 
 }
