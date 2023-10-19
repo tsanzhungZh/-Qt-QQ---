@@ -58,17 +58,34 @@ void SystemWindowView::load_xmode_part(int mode){
 
 }
 void SystemWindowView::mode_owner_init(){
+    this->owner_mod = new OwnerModule(this);
+
+    //车位管理
+    this->ui->menubar->addMenu(this->owner_mod->menu_my_parking);
+    this->ui->toolBar->addAction(this->owner_mod->act_parking_request);
+    this->ui->toolBar->addAction(this->owner_mod->act_parking_show);
+
+
+
 
 }
 void SystemWindowView::mode_worker_init(){
     this->worker_mod = new WorkerModule(this);
 
+    //业主管理
     this->ui->menubar->addMenu(this->worker_mod->menu_owner_info);
-
     this->ui->toolBar->addAction(this->worker_mod->act_owner_find);
     this->ui->toolBar->addAction(this->worker_mod->act_owner_alter);
     this->ui->toolBar->addAction(this->worker_mod->act_owner_registered);
     this->ui->toolBar->addAction(this->worker_mod->act_owner_delete);
+
+    //车位管理
+    this->ui->menubar->addMenu(this->worker_mod->menu_parking_manage);
+    this->ui->toolBar->addAction(this->worker_mod->act_show_parking_info);
+    this->ui->toolBar->addAction(this->worker_mod->act_add_parking_info);
+    this->ui->toolBar->addAction(this->worker_mod->act_modify_parking_info);
+    this->ui->toolBar->addAction(this->worker_mod->act_del_parking_info);
+    this->ui->toolBar->addAction(this->worker_mod->act_parking_rent);
 
 
 
@@ -77,13 +94,14 @@ void SystemWindowView::mode_worker_init(){
 void SystemWindowView::mode_manager_init(){
     this->manager_mod = new ManagerModule(this);
 
+    //用户管理
     this->ui->menubar->addMenu(this->manager_mod->menu_manager);
     this->ui->toolBar->addAction(this->manager_mod->act_add_user);
     this->ui->toolBar->addAction(this->manager_mod->act_show_user);
     this->ui->toolBar->addAction(this->manager_mod->act_alter_user);
     this->ui->toolBar->addAction(this->manager_mod->act_del_user);
 
-
+    //请假审批制度
     this->ui->menubar->addMenu(this->manager_mod->menu_attendance);
     this->ui->toolBar->addAction(this->manager_mod->act_free_confirm);
     this->ui->toolBar->addAction(this->manager_mod->act_free_approve);

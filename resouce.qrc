@@ -29,5 +29,6 @@
         <file>image/windows.jpg</file>
         <file>image/find.jpg</file>
         <file>image/modify.jpg</file>
+        <file>image/del_parking.jpg</file>
     </qresource>
 </RCC>

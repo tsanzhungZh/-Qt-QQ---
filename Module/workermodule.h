@@ -13,12 +13,22 @@ class WorkerModule : public BaseModule
 public:
     explicit WorkerModule(QObject *parent = nullptr);
 
+    //业主管理
     QMenu *menu_owner_info;
-
     QAction *act_owner_find;
     QAction *act_owner_alter;
     QAction *act_owner_registered;
     QAction *act_owner_delete;
+
+
+    //车位管理
+    QMenu *menu_parking_manage;
+    QAction *act_show_parking_info;
+    QAction *act_add_parking_info;
+    QAction *act_modify_parking_info;
+    QAction *act_del_parking_info;
+    QAction *act_parking_rent;
+
 
 private:
 
@@ -29,10 +39,20 @@ private:
     void act_init(void);
 
 public slots:
+    //业主管理
     void slot_owner_find();
     void slot_owner_alter();
     void slot_owner_registered();
     void slot_owner_delete();
+
+    //车位管理
+    void slot_show_parking_info();
+    void slot_add_parking_info();
+    void slot_modify_parking_info();
+    void slot_del_parking_info();
+    void slot_parking_rent();
+
+
 
 };
 

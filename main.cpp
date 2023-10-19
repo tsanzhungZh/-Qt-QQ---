@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
     //qDebug()<<global_keeper->database_action->select_usr_password(1,1379206136);
 #endif
 #ifdef DEBUG_SYS_VIEW
-    SystemWindowView abc(2);
+    SystemWindowView abc(e_owner);
     abc.show();
 
     global_keeper->sys_win_view = &abc;

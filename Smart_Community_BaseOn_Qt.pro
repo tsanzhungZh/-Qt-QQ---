@@ -16,6 +16,7 @@ SOURCES += \
     Module/managerUI/managermodui_add.cpp \
     Module/managerUI/managermodui_alter.cpp \
     Module/managermodule.cpp \
+    Module/ownermodule.cpp \
     Module/systemwindowview.cpp \
     Module/workermodule.cpp \
     Tools/globalkeeper.cpp \
@@ -32,6 +33,7 @@ HEADERS += \
     Module/managerUI/managermodui_add.h \
     Module/managerUI/managermodui_alter.h \
     Module/managermodule.h \
+    Module/ownermodule.h \
     Module/systemwindowview.h \
     Module/workermodule.h \
     Tools/all_include.h \

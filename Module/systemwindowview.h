@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "Module/managermodule.h"
 #include "Module/workermodule.h"
+#include "Module/ownermodule.h"
 #include "QToolBar"
 #include "QMenuBar"
 #include "Tools/info.h"
@@ -21,7 +22,7 @@ public:
 
     ManagerModule *manager_mod;
     WorkerModule *worker_mod;
-
+    OwnerModule *owner_mod;
 
     int cur_mode_id;
 
