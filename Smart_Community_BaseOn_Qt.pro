@@ -19,6 +19,7 @@ SOURCES += \
     Module/ownerUI/ownermdui_parking_req.cpp \
     Module/ownermodule.cpp \
     Module/systemwindowview.cpp \
+    Module/workerUI/workermdui_add_owner.cpp \
     Module/workermodule.cpp \
     Tools/globalkeeper.cpp \
     Tools/info.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     Module/ownerUI/ownermdui_parking_req.h \
     Module/ownermodule.h \
     Module/systemwindowview.h \
+    Module/workerUI/workermdui_add_owner.h \
     Module/workermodule.h \
     Tools/all_include.h \
     Tools/globalkeeper.h \
@@ -49,6 +51,7 @@ FORMS += \
     Module/managerUI/managermodui_alter.ui \
     Module/ownerUI/ownermdui_parking_req.ui \
     Module/systemwindowview.ui \
+    Module/workerUI/workermdui_add_owner.ui \
     widget.ui
 
 # Default rules for deployment.

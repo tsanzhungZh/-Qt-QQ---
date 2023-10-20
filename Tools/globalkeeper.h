@@ -12,7 +12,6 @@
 #include "Interface/databaseaction.h"
 #include "Module/systemwindowview.h"
 
-
 //È«¾ÖÎ¬³ÖÆ÷
 class GlobalKeeper : public QObject
 {
@@ -36,5 +35,7 @@ private:
     QTableView* current_tableview;
     QSqlTableModel* current_model;
 };
+
+extern GlobalKeeper* global_keeper;
 
 #endif // GLOBALKEEPER_H

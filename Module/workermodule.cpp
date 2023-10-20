@@ -121,12 +121,38 @@ void WorkerModule::act_init(){
 }
 void WorkerModule::slot_owner_find(){
 
+    QString cur_table = "houseowner";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
 }
 void WorkerModule::slot_owner_alter(){
 
+
+
+
+
+
 }
 void WorkerModule::slot_owner_registered(){
-
+    this->regist_new_owner_func = new WorkerMdUI_add_owner;
+    this->regist_new_owner_func->show();
 }
 void WorkerModule::slot_owner_delete(){
 

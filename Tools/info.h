@@ -4,6 +4,7 @@
 
 #include <QString>
 #include <QList>
+
 enum login_mode_enum{
 
     e_owner = 0x0,
