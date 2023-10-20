@@ -16,6 +16,7 @@ SOURCES += \
     Module/managerUI/managermodui_add.cpp \
     Module/managerUI/managermodui_alter.cpp \
     Module/managermodule.cpp \
+    Module/ownerUI/ownermdui_parking_req.cpp \
     Module/ownermodule.cpp \
     Module/systemwindowview.cpp \
     Module/workermodule.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     Module/managerUI/managermodui_add.h \
     Module/managerUI/managermodui_alter.h \
     Module/managermodule.h \
+    Module/ownerUI/ownermdui_parking_req.h \
     Module/ownermodule.h \
     Module/systemwindowview.h \
     Module/workermodule.h \
@@ -45,6 +47,7 @@ HEADERS += \
 FORMS += \
     Module/managerUI/managermodui_add.ui \
     Module/managerUI/managermodui_alter.ui \
+    Module/ownerUI/ownermdui_parking_req.ui \
     Module/systemwindowview.ui \
     widget.ui
 

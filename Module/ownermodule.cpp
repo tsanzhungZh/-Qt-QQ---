@@ -75,12 +75,33 @@ void OwnerModule::act_init(){
 
 }
 void OwnerModule::slot_parking_request(){
-
-
+    this->md_parking_req = new OwnerMdUI_parking_req();
+    this->md_parking_req->show();
 
 }
 void OwnerModule::slot_parking_show(){
 
+
+    QString cur_table = "parking";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    //this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
 
 
 }

@@ -3,7 +3,7 @@
 #define OWNERMODULE_H
 
 #include "basemodule.h"
-
+#include "ownerUI/ownermdui_parking_req.h"
 #include <QObject>
 
 
@@ -28,6 +28,9 @@ public:
     QAction *act_issue_report;
     QAction *act_issue_process;
     QAction *act_issue_evaluate;
+
+
+    OwnerMdUI_parking_req* md_parking_req;
 
 private:
 
