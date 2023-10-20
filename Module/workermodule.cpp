@@ -28,17 +28,24 @@ void WorkerModule::menu_init(){
     this->menu_owner_info->addAction(this->act_owner_delete);
 
     //车位管理
-    this->menu_parking_manage = new QMenu("owner manage");
+    this->menu_parking_manage = new QMenu("parking manage");
     this->menu_parking_manage->addAction(this->act_show_parking_info);
     this->menu_parking_manage->addAction(this->act_add_parking_info);
     this->menu_parking_manage->addAction(this->act_modify_parking_info);
     this->menu_parking_manage->addAction(this->act_del_parking_info);
     this->menu_parking_manage->addAction(this->act_parking_rent);
 
+    //管理员的费用管理
     this->menu_payment_manage = new QMenu("payment manage");
     this->menu_payment_manage->addAction(this->act_price_manage);
     this->menu_payment_manage->addAction(this->act_payment_select);
     this->menu_payment_manage->addAction(this->act_get_payment);
+
+    //故障查询和维护
+    this->menu_issue_manage = new QMenu("issue manage");
+    this->menu_issue_manage->addAction(this->act_issue_select);
+    this->menu_issue_manage->addAction(this->act_issue_repair);
+
 
 
 }
@@ -99,6 +106,17 @@ void WorkerModule::act_init(){
     connect(act_get_payment,&QAction::triggered,this,&WorkerModule::slot_get_payment);
 
 
+    //工作人员故障查询和维护
+    this->act_issue_select = new QAction(QIcon(info.picture_path + "issueshow.png"),"issue select");
+    this->act_issue_select->setStatusTip(tr("issue select"));
+    connect(act_issue_select,&QAction::triggered,this,&WorkerModule::slot_issue_select);
+
+    this->act_issue_repair = new QAction(QIcon(info.picture_path + "issuerepair.png"),"issue select");
+    this->act_issue_repair->setStatusTip(tr("issue repair"));
+    connect(act_issue_repair,&QAction::triggered,this,&WorkerModule::slot_issue_repair);
+
+
+
 
 }
 void WorkerModule::slot_owner_find(){
@@ -139,4 +157,9 @@ void WorkerModule::slot_get_payment(){
 
 }
 
+void WorkerModule::slot_issue_select(){
 
+}
+void WorkerModule::slot_issue_repair(){
+
+}

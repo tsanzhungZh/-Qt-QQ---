@@ -23,6 +23,12 @@ public:
     QAction *act_payment_select;
     QAction *act_payment_self_service;
 
+    //π ’œ±®–ﬁ
+    QMenu *menu_issue_report;
+    QAction *act_issue_report;
+    QAction *act_issue_process;
+    QAction *act_issue_evaluate;
+
 private:
 
     void module_init(void);
@@ -30,12 +36,18 @@ private:
     void act_init(void);
 
 public slots:
+
     void slot_parking_request();
     void slot_parking_show();
+
 
     void slot_payment_select();
     void slot_payment_self_service();
 
+
+    void slot_issue_report();
+    void slot_issue_process();
+    void slot_issue_evaluate();
 
 
 

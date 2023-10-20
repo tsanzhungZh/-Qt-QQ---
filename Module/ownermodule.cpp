@@ -31,7 +31,11 @@ void OwnerModule::menu_init(){
     this->menu_payment_manage->addAction(this->act_payment_select);
     this->menu_payment_manage->addAction(this->act_payment_self_service);
 
-
+    //¹ÊÕÏ±¨ÐÞ
+    this->menu_issue_report = new QMenu("issue report");
+    this->menu_issue_report->addAction(this->act_issue_report);
+    this->menu_issue_report->addAction(this->act_issue_process);
+    this->menu_issue_report->addAction(this->act_issue_evaluate);
 
 }
 void OwnerModule::act_init(){
@@ -56,6 +60,19 @@ void OwnerModule::act_init(){
     this->act_payment_self_service->setStatusTip(tr("payment self service"));
     connect(act_payment_self_service,&QAction::triggered,this,&OwnerModule::slot_payment_self_service);
 
+    //¹ÊÕÏ±¨ÐÞ
+    this->act_issue_report = new QAction(QIcon(info.picture_path + "issuerepair.png"),"issue report");
+    this->act_issue_report->setStatusTip(tr("issue report"));
+    connect(act_issue_report,&QAction::triggered,this,&OwnerModule::slot_issue_report);
+
+    this->act_issue_process = new QAction(QIcon(info.picture_path + "attend.jpg"),"issue process");
+    this->act_issue_process->setStatusTip(tr("issue process"));
+    connect(act_issue_process,&QAction::triggered,this,&OwnerModule::slot_issue_process);
+
+    this->act_issue_evaluate = new QAction(QIcon(info.picture_path + "modify.jpg"),"issue evaluate");
+    this->act_issue_evaluate->setStatusTip(tr("issue evaluate"));
+    connect(act_issue_evaluate,&QAction::triggered,this,&OwnerModule::slot_issue_evaluate);
+
 }
 void OwnerModule::slot_parking_request(){
 
@@ -74,5 +91,15 @@ void OwnerModule::slot_payment_select(){
 }
 
 void OwnerModule::slot_payment_self_service(){
+
+}
+
+void OwnerModule::slot_issue_report(){
+
+}
+void OwnerModule::slot_issue_process(){
+
+}
+void OwnerModule::slot_issue_evaluate(){
 
 }

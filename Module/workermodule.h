@@ -35,6 +35,11 @@ public:
     QAction *act_payment_select;
     QAction *act_get_payment;
 
+    //π ’œ≤È—Ø∫ÕŒ¨ª§
+    QMenu *menu_issue_manage;
+    QAction *act_issue_select;
+    QAction *act_issue_repair;
+
 
 private:
 
@@ -62,6 +67,11 @@ public slots:
     void slot_price_manage();
     void slot_payment_select();
     void slot_get_payment();
+
+
+    //π ’œŒ¨ª§
+    void slot_issue_select();
+    void slot_issue_repair();
 
 };
 
