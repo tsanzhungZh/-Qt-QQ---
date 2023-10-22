@@ -4,6 +4,7 @@
 
 #include "basemodule.h"
 #include "ownerUI/ownermdui_parking_req.h"
+#include "ownerUI/ownermdui_issue_report.h"
 #include <QObject>
 
 
@@ -31,7 +32,7 @@ public:
 
 
     OwnerMdUI_parking_req* md_parking_req;
-
+    OwnerMdUI_issue_report* issue_report_func;
 private:
 
     void module_init(void);

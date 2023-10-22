@@ -108,6 +108,27 @@ void OwnerModule::slot_parking_show(){
 
 
 void OwnerModule::slot_payment_select(){
+    QString cur_table = "price_record";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    //this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
+
 
 }
 
@@ -116,6 +137,29 @@ void OwnerModule::slot_payment_self_service(){
 }
 
 void OwnerModule::slot_issue_report(){
+    QString cur_table = "issue";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    //this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
+
+    this->issue_report_func = new OwnerMdUI_issue_report;
+    this->issue_report_func->show();
 
 }
 void OwnerModule::slot_issue_process(){

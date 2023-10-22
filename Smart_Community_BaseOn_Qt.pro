@@ -18,6 +18,7 @@ SOURCES += \
     Module/managerUI/managermodui_add.cpp \
     Module/managerUI/managermodui_alter.cpp \
     Module/managermodule.cpp \
+    Module/ownerUI/ownermdui_issue_report.cpp \
     Module/ownerUI/ownermdui_parking_req.cpp \
     Module/ownermodule.cpp \
     Module/systemwindowview.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
     Module/managerUI/managermodui_add.h \
     Module/managerUI/managermodui_alter.h \
     Module/managermodule.h \
+    Module/ownerUI/ownermdui_issue_report.h \
     Module/ownerUI/ownermdui_parking_req.h \
     Module/ownermodule.h \
     Module/systemwindowview.h \
@@ -65,6 +67,7 @@ FORMS += \
     Module/managerUI/managermdui_free_confirm.ui \
     Module/managerUI/managermodui_add.ui \
     Module/managerUI/managermodui_alter.ui \
+    Module/ownerUI/ownermdui_issue_report.ui \
     Module/ownerUI/ownermdui_parking_req.ui \
     Module/systemwindowview.ui \
     Module/workerUI/workermdui_add_owner.ui \
