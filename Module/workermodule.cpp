@@ -95,7 +95,7 @@ void WorkerModule::act_init(){
     //工作人员的缴费管理
     this->act_price_manage = new QAction(QIcon(info.picture_path + "price.png"),"price manage");
     this->act_price_manage->setStatusTip(tr("parking rent"));
-    connect(act_price_manage,&QAction::triggered,this,&WorkerModule::slot_parking_rent);
+    connect(act_price_manage,&QAction::triggered,this,&WorkerModule::slot_price_manage);
 
     this->act_payment_select = new QAction(QIcon(info.picture_path + "pay.png"),"payment select");
     this->act_payment_select->setStatusTip(tr("payment select"));
@@ -211,10 +211,35 @@ void WorkerModule::slot_del_parking_info(){
 
 }
 void WorkerModule::slot_parking_rent(){
-
+    this->rent_parking_func = new WorkerMdUI_parking_rent;
+    this->rent_parking_func->show();
 }
 
 void WorkerModule::slot_price_manage(){
+
+    QString cur_table = "price";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    //this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
+
+    this->price_manage = new WorkerMdUI_price_manage;
+    this->price_manage->show();
 
 }
 void WorkerModule::slot_payment_select(){
@@ -222,6 +247,30 @@ void WorkerModule::slot_payment_select(){
 }
 void WorkerModule::slot_get_payment(){
 
+    QString cur_table = "price_record";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    //this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
+
+
+    this->get_price_func = new WorkerMdUI_get_price;
+    this->get_price_func->show();
 }
 
 void WorkerModule::slot_issue_select(){

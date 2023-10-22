@@ -22,7 +22,10 @@ SOURCES += \
     Module/ownermodule.cpp \
     Module/systemwindowview.cpp \
     Module/workerUI/workermdui_add_owner.cpp \
+    Module/workerUI/workermdui_get_price.cpp \
     Module/workerUI/workermdui_parking_add.cpp \
+    Module/workerUI/workermdui_parking_rent.cpp \
+    Module/workerUI/workermdui_price_manage.cpp \
     Module/workermodule.cpp \
     Tools/globalkeeper.cpp \
     Tools/info.cpp \
@@ -44,7 +47,10 @@ HEADERS += \
     Module/ownermodule.h \
     Module/systemwindowview.h \
     Module/workerUI/workermdui_add_owner.h \
+    Module/workerUI/workermdui_get_price.h \
     Module/workerUI/workermdui_parking_add.h \
+    Module/workerUI/workermdui_parking_rent.h \
+    Module/workerUI/workermdui_price_manage.h \
     Module/workermodule.h \
     Tools/all_include.h \
     Tools/globalkeeper.h \
@@ -60,7 +66,10 @@ FORMS += \
     Module/ownerUI/ownermdui_parking_req.ui \
     Module/systemwindowview.ui \
     Module/workerUI/workermdui_add_owner.ui \
+    Module/workerUI/workermdui_get_price.ui \
     Module/workerUI/workermdui_parking_add.ui \
+    Module/workerUI/workermdui_parking_rent.ui \
+    Module/workerUI/workermdui_price_manage.ui \
     widget.ui
 
 # Default rules for deployment.

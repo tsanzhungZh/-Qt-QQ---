@@ -95,7 +95,7 @@ void SystemWindowView::mode_worker_init(){
     //½É·Ñ¹ÜÀí
     this->ui->menubar->addMenu(this->worker_mod->menu_payment_manage);
     this->ui->toolBar->addAction(this->worker_mod->act_price_manage);
-    this->ui->toolBar->addAction(this->worker_mod->act_payment_select);
+    //this->ui->toolBar->addAction(this->worker_mod->act_payment_select);
     this->ui->toolBar->addAction(this->worker_mod->act_get_payment);
     this->ui->toolBar->addSeparator();
 

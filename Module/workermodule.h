@@ -7,6 +7,9 @@
 #include <QObject>
 #include "workerUI/workermdui_add_owner.h"
 #include "workerUI/workermdui_parking_add.h"
+#include "workerUI/workermdui_parking_rent.h"
+#include "workerUI/workermdui_price_manage.h"
+#include"workerUI/workermdui_get_price.h"
 class WorkerModule : public BaseModule
 {
     Q_OBJECT
@@ -42,6 +45,12 @@ public:
 
     WorkerMdUI_add_owner* regist_new_owner_func;
     WorkerMdUI_parking_add* add_parking_func;
+    WorkerMdUI_parking_rent* rent_parking_func;
+    WorkerMdUI_price_manage* price_manage;
+    WorkerMdUI_get_price* get_price_func;
+
+
+
 
 private:
 

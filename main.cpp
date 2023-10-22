@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
 
 #ifdef DEBUG_SYS_VIEW
-    SystemWindowView abc(e_manager);
+    SystemWindowView abc(e_owner);
     abc.show();
 
     global_keeper->sys_win_view = &abc;

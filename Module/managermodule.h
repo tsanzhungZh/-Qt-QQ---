@@ -9,6 +9,7 @@
 #include "Module/managerUI/managermodui_alter.h"
 #include "Module/managerUI/managermdui_free_confirm.h"
 #include "Module/managerUI/managermdui_free_approve.h"
+
 class ManagerModule : public BaseModule
 {
     Q_OBJECT
