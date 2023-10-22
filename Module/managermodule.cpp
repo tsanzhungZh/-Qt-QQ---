@@ -61,7 +61,7 @@ void ManagerModule::act_init(){
     this->act_free_confirm->setStatusTip(tr("free confirm"));
     connect(act_free_confirm,&QAction::triggered,this,&ManagerModule::slot_free_confirm);
 
-    this->act_free_approve = new QAction(QIcon(info.picture_path + "approve.jpg"),"free approve");
+    this->act_free_approve = new QAction(QIcon(info.picture_path + "find.jpg"),"free approve");
     this->act_free_approve->setStatusTip(tr("free approve"));
     connect(act_free_approve,&QAction::triggered,this,&ManagerModule::slot_free_approve);
 

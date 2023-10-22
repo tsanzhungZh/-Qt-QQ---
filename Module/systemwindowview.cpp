@@ -118,7 +118,7 @@ void SystemWindowView::mode_manager_init(){
     this->ui->menubar->addMenu(this->manager_mod->menu_attendance);
     this->ui->toolBar->addAction(this->manager_mod->act_free_confirm);
     this->ui->toolBar->addAction(this->manager_mod->act_free_approve);
-    this->ui->toolBar->addAction(this->manager_mod->act_find_attend);
+    //this->ui->toolBar->addAction(this->manager_mod->act_find_attend);
 
 
 
