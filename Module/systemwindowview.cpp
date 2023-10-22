@@ -34,7 +34,6 @@ void SystemWindowView::load_window_bar(void){
 
 }
 void SystemWindowView::load_xmode_part(int mode){
-
     switch (mode) {
     case e_owner:
         this->mode_owner_init();

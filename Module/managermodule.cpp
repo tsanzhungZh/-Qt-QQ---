@@ -128,10 +128,53 @@ void ManagerModule::slot_del_user(){
 }
 
 void ManagerModule::slot_free_confirm(){
+    this->free_confirm_func = new ManagerMdUI_free_confirm;
+    this->free_confirm_func->show();
+
+    QString cur_table = "workerattend";
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
+
+
+
+
+
+
+
 
 }
 void ManagerModule::slot_free_approve(){
 
+    this->free_approve_func = new ManagerMdUI_free_approve;
+    this->free_approve_func->show();
+
+    QString cur_table = "workerattend";
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
 }
 void ManagerModule::slot_find_attend(){
 

@@ -13,6 +13,8 @@ SOURCES += \
     Interface/databaseoperator.cpp \
     Interface/tablemodelaction.cpp \
     Module/basemodule.cpp \
+    Module/managerUI/managermdui_free_approve.cpp \
+    Module/managerUI/managermdui_free_confirm.cpp \
     Module/managerUI/managermodui_add.cpp \
     Module/managerUI/managermodui_alter.cpp \
     Module/managermodule.cpp \
@@ -32,6 +34,8 @@ HEADERS += \
     Interface/databaseoperator.h \
     Interface/tablemodelaction.h \
     Module/basemodule.h \
+    Module/managerUI/managermdui_free_approve.h \
+    Module/managerUI/managermdui_free_confirm.h \
     Module/managerUI/managermodui_add.h \
     Module/managerUI/managermodui_alter.h \
     Module/managermodule.h \
@@ -47,6 +51,8 @@ HEADERS += \
     widget.h
 
 FORMS += \
+    Module/managerUI/managermdui_free_approve.ui \
+    Module/managerUI/managermdui_free_confirm.ui \
     Module/managerUI/managermodui_add.ui \
     Module/managerUI/managermodui_alter.ui \
     Module/ownerUI/ownermdui_parking_req.ui \

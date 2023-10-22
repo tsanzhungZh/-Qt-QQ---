@@ -16,7 +16,6 @@ QString DataBaseAction::select_usr_password(int mode,qint64 username){
     QString Key = "username";
     QString Value = "password";
 
-
     QList<QMap<QString, QVariant>> *res;
     QString tablename = get_xmode_login_db_tablename(mode);
 

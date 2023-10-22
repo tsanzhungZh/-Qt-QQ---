@@ -18,15 +18,17 @@ int main(int argc, char *argv[])
 
     load_globalkeeper();
     gk_init_database_action();
-
-    //Widget w;
-    //w.show();
-
+#ifndef DEBUG_SYS_VIEW
+    Widget w;
+    w.show();
+#endif
 #ifdef DEBUG_GLOBALKEEPER
     //qDebug()<<global_keeper->database_action->select_usr_password(1,1379206136);
 #endif
+
+
 #ifdef DEBUG_SYS_VIEW
-    SystemWindowView abc(e_worker);
+    SystemWindowView abc(e_manager);
     abc.show();
 
     global_keeper->sys_win_view = &abc;

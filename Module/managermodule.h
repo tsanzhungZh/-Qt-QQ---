@@ -7,7 +7,8 @@
 #include <QObject>
 #include "Module/managerUI/managermodui_add.h"
 #include "Module/managerUI/managermodui_alter.h"
-
+#include "Module/managerUI/managermdui_free_confirm.h"
+#include "Module/managerUI/managermdui_free_approve.h"
 class ManagerModule : public BaseModule
 {
     Q_OBJECT
@@ -31,6 +32,8 @@ public:
     ManagerModUI_add* add_func;
     ManagerModUI_alter* alter_func;
 
+    ManagerMdUI_free_confirm* free_confirm_func;
+    ManagerMdUI_free_approve* free_approve_func;
 private:
 
     void module_init(void);
