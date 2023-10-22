@@ -9,7 +9,8 @@
 #include "workerUI/workermdui_parking_add.h"
 #include "workerUI/workermdui_parking_rent.h"
 #include "workerUI/workermdui_price_manage.h"
-#include"workerUI/workermdui_get_price.h"
+#include "workerUI/workermdui_get_price.h"
+#include "workerUI/workermdui_issue_report.h"
 class WorkerModule : public BaseModule
 {
     Q_OBJECT
@@ -48,7 +49,7 @@ public:
     WorkerMdUI_parking_rent* rent_parking_func;
     WorkerMdUI_price_manage* price_manage;
     WorkerMdUI_get_price* get_price_func;
-
+    WorkerMdUI_issue_report* issue_report;
 
 
 

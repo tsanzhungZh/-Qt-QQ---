@@ -23,6 +23,7 @@ SOURCES += \
     Module/systemwindowview.cpp \
     Module/workerUI/workermdui_add_owner.cpp \
     Module/workerUI/workermdui_get_price.cpp \
+    Module/workerUI/workermdui_issue_report.cpp \
     Module/workerUI/workermdui_parking_add.cpp \
     Module/workerUI/workermdui_parking_rent.cpp \
     Module/workerUI/workermdui_price_manage.cpp \
@@ -48,6 +49,7 @@ HEADERS += \
     Module/systemwindowview.h \
     Module/workerUI/workermdui_add_owner.h \
     Module/workerUI/workermdui_get_price.h \
+    Module/workerUI/workermdui_issue_report.h \
     Module/workerUI/workermdui_parking_add.h \
     Module/workerUI/workermdui_parking_rent.h \
     Module/workerUI/workermdui_price_manage.h \
@@ -67,6 +69,7 @@ FORMS += \
     Module/systemwindowview.ui \
     Module/workerUI/workermdui_add_owner.ui \
     Module/workerUI/workermdui_get_price.ui \
+    Module/workerUI/workermdui_issue_report.ui \
     Module/workerUI/workermdui_parking_add.ui \
     Module/workerUI/workermdui_parking_rent.ui \
     Module/workerUI/workermdui_price_manage.ui \
