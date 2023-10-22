@@ -159,14 +159,55 @@ void WorkerModule::slot_owner_delete(){
 }
 void WorkerModule::slot_show_parking_info(){
 
+    QString cur_table = "parking";
+
+    //this->model = new QSqlTableModel(this,*global_keeper->get_database());
+    this->model = new QSqlTableModel(this);
+    this->table_view = new QTableView;
+    //this->table_view->setModel(this->model);
+    this->model->setTable(cur_table);
+    //查询数据
+    if(!this->model->select())
+    {
+        qDebug()<<"查询失败";
+        return;
+    }
+    //this->model->setHeaderData(this->model->fieldIndex("username"),Qt::Horizontal,"password");
+    this->table_view->setModel(this->model);
+
+    static_cast<SystemWindowView*>(this->parent())->setCentralWidget(this->table_view);
+
+    global_keeper->regist_model(model);
+    global_keeper->regist_tableview(table_view);
+
 }
 void WorkerModule::slot_add_parking_info(){
-
+    this->add_parking_func = new WorkerMdUI_parking_add;
+    this->add_parking_func->show();
 }
 void WorkerModule::slot_modify_parking_info(){
 
 }
 void WorkerModule::slot_del_parking_info(){
+
+    int curRow = this->table_view->currentIndex().row();
+
+
+    int ret = QMessageBox::warning(static_cast<SystemWindowView*>(this->parent()),tr("delete current user"),tr("are you sure ?"),
+                                   QMessageBox::Yes,QMessageBox::No);
+
+    if(ret == QMessageBox::Yes){
+        qDebug()<<"Yes delete";
+        model->removeRow(curRow);
+        model->submitAll();
+
+
+    }else{
+        qDebug()<<"No delete";
+        model->revertAll();
+    }
+
+    this->slot_show_parking_info();
 
 }
 void WorkerModule::slot_parking_rent(){

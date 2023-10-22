@@ -14,7 +14,7 @@
 
 #define DEBUG_GLOBALKEEPER
 
-#define DEBUG_SYS_VIEW
+//#define DEBUG_SYS_VIEW
 /*
  * 定义全局调试flag
  * =================================================================

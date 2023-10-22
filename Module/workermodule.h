@@ -6,7 +6,7 @@
 #include <QMenu>
 #include <QObject>
 #include "workerUI/workermdui_add_owner.h"
-
+#include "workerUI/workermdui_parking_add.h"
 class WorkerModule : public BaseModule
 {
     Q_OBJECT
@@ -41,6 +41,7 @@ public:
     QAction *act_issue_repair;
 
     WorkerMdUI_add_owner* regist_new_owner_func;
+    WorkerMdUI_parking_add* add_parking_func;
 
 private:
 
